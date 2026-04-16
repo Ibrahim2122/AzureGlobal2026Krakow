@@ -49,3 +49,12 @@ module "service_plan" {
     project     = "myapp"
   }
 }
+
+module "app_service" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=app_service/v1.0.0"
+  # also any inputs for the module (see below)
+  app_service_name = "ibrahimapp1234"
+  app_service_plan_id = module.service_plan.app_service_plan.id
+  app_settings = {}
+  identity_client_id = "3e6d7df1-32d9-4c60-98b2-61d5cad924f7"
+}
