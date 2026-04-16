@@ -66,7 +66,7 @@ module "app_service" {
   app_service_name = "ibrahimapp1234"
   app_service_plan_id = module.service_plan.app_service_plan.id
   app_settings = {
-    AZURE_SQL_CONNECTION_STRING = "Server=tcp:${module.mssql_server.server.fully_qualified_domain_name},1433;Initial Catalog=${module.mssql_server.databases["mydb"].name};Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      AZURE_SQL_CONNECTION_STRING = "Server=tcp:${module.mssql_server.server.fully_qualified_domain_name},1433;Initial Catalog=${module.mssql_server.databases["mydatabase"].name};Authentication=Active Directory Default;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
   }
   identity_client_id = module.managed_identity.managed_identity_client_id
   identity_id = module.managed_identity.managed_identity_id
