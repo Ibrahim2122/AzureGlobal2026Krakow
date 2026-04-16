@@ -12,8 +12,8 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "rg-user6" #change here
-    storage_account_name = "azureevent2026" #change here
+    resource_group_name  = "rg-user6"
+    storage_account_name = "azureevent2026"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
