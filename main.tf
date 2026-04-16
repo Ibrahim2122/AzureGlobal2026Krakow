@@ -73,3 +73,16 @@ module "app_service" {
     location = "northeurope"
   }
 }
+
+module "mssql_server" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=mssql_server/v1.0.0"
+  # also any inputs for the module (see below)
+  resource_group = {
+    name     = "rg-user6"
+    location = "northeurope"
+  }
+  sql_server_name = "ibrahimsqlserver1234"
+  sql_server_admin = "sqladminuser"
+  sql_server_version = "17.0"
+}
+
