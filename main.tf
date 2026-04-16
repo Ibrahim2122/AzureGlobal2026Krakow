@@ -65,7 +65,9 @@ module "app_service" {
   # also any inputs for the module (see below)
   app_service_name = "ibrahimapp1234"
   app_service_plan_id = module.service_plan.app_service_plan.id
-  app_settings = {}
+  app_settings = {
+    AZURE_SQL_CONNECTION_STRING = "Server=tcp:${module.mssql_server.sql_server_name}.database.windows.net,1433;Initial Catalog=mydatabase;Persist Security Info=False;User ID=${module.mssql_server.sql_server_admin};Password=your_password_here;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  }
   identity_client_id = module.managed_identity.managed_identity_client_id
   identity_id = module.managed_identity.managed_identity_id
   resource_group = {
