@@ -83,6 +83,6 @@ module "mssql_server" {
   }
   sql_server_name = "ibrahimsqlserver1234"
   sql_server_admin = "sqladminuser"
-  sql_server_version = "17.0"
+  sql_server_version = "12.0"
 }
 
