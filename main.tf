@@ -50,6 +50,16 @@ module "service_plan" {
   }
 }
 
+module "managed_identity" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=managed_identity/v1.0.0"
+  # also any inputs for the module (see below)
+  name = "ibrahim-identity-appservice"
+  resource_group = {
+    name     = "rg-user6"
+    location = "northeurope"
+  }
+}
+
 module "app_service" {
   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=app_service/v1.0.0"
   # also any inputs for the module (see below)
