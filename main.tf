@@ -24,7 +24,7 @@ module "keyvault" {
   keyvault_name = "ibrahimkey1234"
   network_acls = {
     default_action = "Deny"
-    bypass         = "NONE"
+    bypass         = "AzureServices"
     virtual_network_rules = []
     ip_rules       = []
   }
@@ -34,3 +34,4 @@ module "keyvault" {
     location = "northeurope"
   }
 }
+
