@@ -57,7 +57,7 @@ module "app_service" {
   app_service_plan_id = module.service_plan.app_service_plan.id
   app_settings = {}
   identity_client_id = "3e6d7df1-32d9-4c60-98b2-61d5cad924f7"
-  identity_id = "9a47ce31-d69f-4de9-b79f-ea417fad3d22"
+  identity_id = "/subscriptions/4c569ea4-8bfc-4063-9557-390e4b28a153/resourcegroups/rg-user6/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ibrahim-identity"
   resource_group = {
     name     = "rg-user6"
     location = "northeurope"
