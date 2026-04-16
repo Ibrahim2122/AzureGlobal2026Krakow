@@ -88,8 +88,8 @@ module "mssql_server" {
   sql_server_version = "12.0"
   databases = [
     {
-      name = "ibrahimdb1234"
-      sku_name = "S0"
+      name     = "mydatabase"
+      sku_name = "Basic"
     }
   ]
 }
