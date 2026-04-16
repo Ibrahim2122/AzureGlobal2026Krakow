@@ -88,10 +88,11 @@ module "mssql_server" {
   sql_server_version = "12.0"
   databases = [
     {
-      name     = "mydatabase"
-      sku_name = "Basic"
+      name                 = "mydatabase"
+      sku                  = "Basic"
+      size                 = 2048
       storage_account_type = "Standard_LRS"
-      collection = "mycollection"
+      collation            = "SQL_Latin1_General_CP1_CI_AS"
     }
   ]
 }
