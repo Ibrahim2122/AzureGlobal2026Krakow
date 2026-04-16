@@ -66,8 +66,8 @@ module "app_service" {
   app_service_name = "ibrahimapp1234"
   app_service_plan_id = module.service_plan.app_service_plan.id
   app_settings = {}
-  identity_client_id = module.managed_identity.managed_identity_client_id.value
-  identity_id = module.managed_identity.managed_identity_id.value
+  identity_client_id = module.managed_identity.managed_identity_client_id
+  identity_id = module.managed_identity.managed_identity_id
   resource_group = {
     name     = "rg-user6"
     location = "northeurope"
