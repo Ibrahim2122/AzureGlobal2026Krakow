@@ -91,7 +91,7 @@ module "mssql_server" {
       name                 = "mydatabase"
       sku                  = "Basic"
       size                 = 2048
-      storage_account_type = "Standard_LRS"
+      storage_account_type = "Local"
       collation            = "SQL_Latin1_General_CP1_CI_AS"
     }
   ]
