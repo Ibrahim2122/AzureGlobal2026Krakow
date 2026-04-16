@@ -90,6 +90,8 @@ module "mssql_server" {
     {
       name     = "mydatabase"
       sku_name = "Basic"
+      storage_account_type = "Standard_LRS"
+      collection = "mycollection"
     }
   ]
 }
